@@ -18,6 +18,13 @@ import TodoList from './components/todo-list';
 
 
 const App = () => {
+
+    const todoData = [
+        {label: 'Drink coffee', important: false, id: 1},
+        {label: 'Make Awesome App', important: true, id: 2},
+        {label: 'Have a lunch', important: false, id: 3},
+    ];
+
     const login = <span>Log in please</span>;
     return (
         <div>
@@ -25,7 +32,7 @@ const App = () => {
             <br/><br/>{login}
             <AppHeader/>
             <SearchPanel/>
-            <TodoList/>
+            <TodoList todos={todoData}/>
         </div>
     );
 };
